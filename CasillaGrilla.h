@@ -4,7 +4,6 @@
 class CasillaGrilla {
    int NYerba; //la cantidad de yerba por casilla  
    char Animal; //por un char sabemos que animal tiene 
-   
    public:
    void CrearCasilla (){
       NYerba = rand()%4;
@@ -21,7 +20,16 @@ class CasillaGrilla {
    }
       
    void UpdateYerba (){
-      NYerba=rand()%4; // igual que la anterior hay que llamar a random de 0 a 3
+      NYerba=rand()%4; // igual que la anterior hay que llamar a random de 0 a 3 
+   }
+   char VerCasilla(){
+       return Animal;
+   }
+   int VerYerba(){
+       return NYerba;
+   }
+   void EditarAnimal(char NuevoAnimal){
+       Animal=NuevoAnimal;
    }
 
 };
